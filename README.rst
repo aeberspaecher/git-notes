@@ -33,7 +33,7 @@ Settings
     +------------+----------------------+
     | user.email | User email.          |
     +------------+----------------------+
-    | color.ui   | Use colors?          |
+    | color.ui   | Use colors ("auto"!)?|
     +------------+----------------------+
     |core.editor | Which editor to use? |
     +------------+----------------------+
@@ -84,9 +84,9 @@ Local use
 
       git rm --cached file
 
-- go back to last commited version::
+- go back to fileName's last commited version::
 
-    git checkout
+    git checkout -- fileName
 
 Usage with central repository
 =============================

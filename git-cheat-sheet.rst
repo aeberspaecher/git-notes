@@ -2,10 +2,6 @@
 Git Cheat Sheet
 ===============
 
------------------------------
-What I just learned about Git
------------------------------
-
 Settings
 ========
 
@@ -159,10 +155,14 @@ Usage with central repository
     git push ssh://user@host.domain.tld/home/user/foo.git '*:*'
 
   (this pushes the local repo with everything to the server)
-  
-- after hacking, update repo on server::
 
-    cd localRepo
+- clone new working directory that tracks the one on the server::
+
+    git clone ssh://user@host.domain.tld/home/user/foo.git newRepo
+
+- after hacking in ``newRepo``, update repo on server::
+
+    cd newRepo
     git push
 
 GitHub

@@ -131,13 +131,10 @@ Branches
 
   for any branch.
 
-- merge current branch with ``other`` branch::
+- merge ``other`` branch into current branch::
 
     git merge other
-
-
-    
-
+  
 Usage with central repository
 =============================
 
@@ -245,4 +242,3 @@ TODO
 ====
 
 - notions (staging, head...)
-- learn about branches

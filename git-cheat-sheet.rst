@@ -154,24 +154,76 @@ Branches
 Using ``git`` with remote repositories
 ======================================
 
-For this section, *remote* means on a different machine, not just
-"another repo".
+- add remote::
+
+    git remote add myRepo ssh://user@host.domain.tld/directory/myRepo
 
 - show aliases for remote repositories::
 
     git remote
     git remote show aliasName
 
-  The second line gives details.
+  The second line gives details (also on branches).
 
-- add alias::
+- rename a remote::
 
-    git remote add myRepo ssh://user@host.domain.tld/directory/myRepo
+    git remote rename oldAlias newAlias
 
-- get changes from remote repository::
+- remove a remote (and all tracking branches already fetched)::
 
-    git pull
+    git remote rm alias
 
+- clone a copy of a remote repository and create a local repository with
+  a suitable remote ``origin`` set::
+
+    git clone URL
+
+  ``clone`` will get create a subfolder, fill (fetch) the subfolder with
+  the contents of the repo and then create and checkout the default
+  branch.
+
+- get a specific branch from the remote and start working in it::
+
+    git checkout -b branchName origin/branchName
+
+- retrieve all remote branches with
+
+  ::
+
+    git fetch remoteAlias
+
+  No local branches will be altered (merging possibly needed).
+
+- fetch a remote branch and merge it with the current branch::
+
+    git pull remoteAlias branchName
+
+  The working copy shall be clean for this operation.
+
+- after a branch has been deleted from a remote repo,
+  ::
+
+    git prune remoteAlias
+
+  will delete the remote-tracking branches that do not exist in the
+  remote anymore.
+
+- push local changes back to the remote with
+
+  ::
+  
+    git push remoteAlias branchName
+
+  A different name for the branch will be used by
+
+  ::
+  
+    git push remoteAlias localBranchName:remoteBranchName
+
+- delete remote branch::
+
+    git push remoteAlias :branchName
+  
 With central repository
 -----------------------
 
@@ -180,7 +232,8 @@ With central repository
     git init --bare --shared foo.git
     chgrp -R dev foo.git  (optional)
   
-  ``shared`` makes the repo group writable.
+  ``shared`` makes the repo group writable. ``bare`` means there is no
+  working copy.
 
 - push local repo to server::
 
@@ -197,6 +250,8 @@ With central repository
 
     cd newRepo
     git push
+
+  For more options, see above.
 
 With GitHub
 -----------
@@ -221,6 +276,8 @@ With GitHub
 
     cd repoName
     git push
+
+  For more options, see above.
 
 Discarding changes in working copy
 ==================================

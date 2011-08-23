@@ -98,6 +98,14 @@ Basic Git
 
     git mv oldName newName
 
+- ``diff`` for all files::
+
+    git diff
+
+  ``diff`` for a single file::
+
+    git diff fileName
+    
 Branches
 ========
 
@@ -242,3 +250,4 @@ TODO
 ====
 
 - notions (staging, head...)
+- bug fixes

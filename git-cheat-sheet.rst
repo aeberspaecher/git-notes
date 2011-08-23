@@ -23,7 +23,7 @@ Settings
 - some common settings:
 
     +------------+----------------------+
-    |    name    |  meaning             |
+    |   Setting  |  Meaning             |
     +============+======================+
     | user.name  | User name.           |
     +------------+----------------------+
@@ -127,7 +127,7 @@ Branches
 
     git branch -d branchName
 
-  for branches that branch off ``HEAD``,
+  for branches that branch off ``HEAD``;
 
   ::
 
@@ -138,9 +138,42 @@ Branches
 - merge ``other`` branch into current branch::
 
     git merge other
-  
-Usage with central repository
-=============================
+
+- push all branches to remote repository::
+
+    git push --all
+
+- rename a branch::
+
+     git branch -m oldBranch newBranch
+
+- checkout single files from another branch to current branch::
+
+    git checkout branchToUse fileName
+
+Using ``git`` with remote repositories
+======================================
+
+For this section, *remote* means on a different machine, not just
+"another repo".
+
+- show aliases for remote repositories::
+
+    git remote
+    git remote show aliasName
+
+  The second line gives details.
+
+- add alias::
+
+    git remote add myRepo ssh://user@host.domain.tld/directory/myRepo
+
+- get changes from remote repository::
+
+    git pull
+
+With central repository
+-----------------------
 
 - Create a repository on central server::
 
@@ -165,8 +198,8 @@ Usage with central repository
     cd newRepo
     git push
 
-GitHub
-======
+With GitHub
+-----------
 
 - create repository ``repoName`` from the web interface
 
@@ -189,8 +222,8 @@ GitHub
     cd repoName
     git push
 
-Going back to checked in versions
-=================================
+Discarding changes in working copy
+==================================
 
 There are at least two different ways to reset to working directory to the last
 versioned status:

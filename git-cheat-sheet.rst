@@ -276,6 +276,7 @@ Links
 =====
 
 - Git reference: http://gitref.org/
+- "Pro Git" book: http://progit.org/
 - Git community book: http://book.git-scm.com/
 - Git with central sever: http://toroid.org/ams/git-central-repo-howto
 

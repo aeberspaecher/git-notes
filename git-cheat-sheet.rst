@@ -98,6 +98,46 @@ Basic Git
 
     git mv oldName newName
 
+Branches
+========
+
+- list branches::
+
+    git branch
+
+  Add ``-r`` for remote branches, use ``-a`` for remote and local branches.
+
+- create new branch::
+
+    git branch newBranch
+
+  Create and change to that branch::
+
+    git branch -b newBranch
+
+- change to a branch::
+
+    git checkout branchName
+
+- delete branch::
+
+    git branch -d branchName
+
+  for branches that branch off ``HEAD``,
+
+  ::
+
+    git branch -D branchName
+
+  for any branch.
+
+- merge current branch with ``other`` branch::
+
+    git merge other
+
+
+    
+
 Usage with central repository
 =============================
 
@@ -197,7 +237,8 @@ Stashes: keep changes
 Links
 =====
 
-- Git community book http://book.git-scm.com/
+- Git reference: http://gitref.org/
+- Git community book: http://book.git-scm.com/
 - Git with central sever: http://toroid.org/ams/git-central-repo-howto
 
 TODO

@@ -5,9 +5,10 @@ Git Cheat Sheet
 Settings
 ========
 
-- list Git configuration::
+- show git configuration::
 
     git config --list
+    git config --get user.name
 
 - set configuration::
 
@@ -15,10 +16,6 @@ Settings
     git config --add color.ui "auto"
 
   ``--global`` makes the setting global for all repos.
-
-- show configuration::
-
-    git config --get user.name
 
 - some common settings:
 
@@ -41,10 +38,9 @@ Basic Git
 
     cd projDir
     git init
-  
+
 - Add files to repository::
 
-    cd projDir
     git add file1 file2
 
   or
@@ -68,7 +64,7 @@ Basic Git
 
     git commit -a
 
-  (opens editor and allows to change the commit message)
+  (opens the editor specified by ``core.editor`` for editing the commit message)
 
 - remove file from version control:
 
@@ -101,7 +97,18 @@ Basic Git
   ``diff`` for a single file::
 
     git diff fileName
-    
+
+- let git ignore certain files: create a file ``.gitignore`` and add it to the
+  repo::
+
+    # comment
+    *.so
+    !bla.so
+    TODO
+
+  This makes ``git`` ignore the file ``TODO`` and all ``.so`` files, except
+  ``bla.so``.
+
 Branches
 ========
 
@@ -151,10 +158,23 @@ Branches
 
     git checkout branchToUse fileName
 
+- create a tracking branch that follows remote changes::
+
+    git branch --track myBranch remoteAlias/theirBranch
+
+  Alternatively,
+
+  ::
+
+     git pull theirBranach
+
+  will fetch ``'origin/theirBranch`` and merge with the local ``theirBranch``
+  branch.
+
 Using ``git`` with remote repositories
 ======================================
 
-- add remote::
+- add alias ``myRepo`` for remote repository::
 
     git remote add myRepo ssh://user@host.domain.tld/directory/myRepo
 
@@ -211,19 +231,19 @@ Using ``git`` with remote repositories
 - push local changes back to the remote with
 
   ::
-  
+
     git push remoteAlias branchName
 
   A different name for the branch will be used by
 
   ::
-  
+
     git push remoteAlias localBranchName:remoteBranchName
 
 - delete remote branch::
 
     git push remoteAlias :branchName
-  
+
 With central repository
 -----------------------
 
@@ -231,7 +251,7 @@ With central repository
 
     git init --bare --shared foo.git
     chgrp -R dev foo.git  (optional)
-  
+
   ``shared`` makes the repo group writable. ``bare`` means there is no
   working copy.
 
@@ -328,7 +348,7 @@ Stashes: keep changes
     git stash drop stash@{0}
 
   deletes the stash ``stash@{0}``.
-  
+
 Links
 =====
 
@@ -341,4 +361,6 @@ TODO
 ====
 
 - notions (staging, head...)
-- bug fixes
+- info on merging
+- learn rebasing
+- fix bugs (that certainly do exist in here)

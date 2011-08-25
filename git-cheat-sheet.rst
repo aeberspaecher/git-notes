@@ -122,9 +122,9 @@ Branches
 
     git branch newBranch
 
-  Create and change to that branch::
+  Create a branch and check it out immediately::
 
-    git branch -b newBranch
+    git checkout -b newBranch
 
 - change to a branch::
 

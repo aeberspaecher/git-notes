@@ -64,7 +64,15 @@ Basic Git
 
     git commit -a
 
-  (opens the editor specified by ``core.editor`` for editing the commit message)
+  Open the editor specified by ``core.editor`` for editing the commit
+  message and then commit all changed files.
+
+  ::
+
+    git commit file1 file2
+
+  Only commit ``file1`` and ``file2``, open editor for editing the commit
+  message.
 
 - remove file from version control:
 

@@ -77,6 +77,14 @@ Basic Git
   Only commit ``file1`` and ``file2``, open editor for editing the commit
   message.
 
+- change last commit::
+
+    git commit --amend
+
+  Opens the text editor to change to commit message. Also notices
+  files that have been changed and staged (``git add file``) or
+  removed.
+
 - remove file from version control:
 
   - also remove file from disk::

@@ -39,7 +39,7 @@ Basic Git
     cd projDir
     git init
 
-- Add files to repository::
+- Add files to version control::
 
     git add file1 file2
 
@@ -48,6 +48,9 @@ Basic Git
   ::
 
     git add *
+
+  If the files have been added before, they will be included in the
+  'staging area' and thus committed withe the next ``git commit``.
 
 - Status and log::
 
@@ -65,7 +68,7 @@ Basic Git
     git commit -a
 
   Open the editor specified by ``core.editor`` for editing the commit
-  message and then commit all changed files.
+  message and then commit all changed files (skip staging files).
 
   ::
 
@@ -73,6 +76,14 @@ Basic Git
 
   Only commit ``file1`` and ``file2``, open editor for editing the commit
   message.
+
+- change last commit::
+
+    git commit --amend
+
+  Opens the text editor to change to commit message. Also notices
+  files that have been changed and staged (``git add file``) or
+  removed.
 
 - remove file from version control:
 
@@ -84,7 +95,7 @@ Basic Git
 
       git rm --cached file
 
-- go back to ``fileName``'s last commited version::
+- go back to ``fileName``'s last committed version::
 
     git checkout -- fileName
 
@@ -320,7 +331,8 @@ Checkout: Forget about changes
 
   git checkout -- fileName
 
-resets ``fileName`` to the last checked in version.
+resets ``fileName`` to the last checked in version - changes in the
+working directory are lost!
 
 Stashes: keep changes
 ---------------------

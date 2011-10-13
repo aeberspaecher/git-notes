@@ -9,7 +9,6 @@ This is meant to be an attempt at a lengthy ``git`` 'cheat sheet'. I
 am am still very new to ``git`` and trying to take notes on my
 personal progress with ``git``.
 
-<<<<<<< HEAD
 There are two cheat sheets:
 
 - ``git-cheat-sheet.*`` is a rather long cheat sheet in English
@@ -19,15 +18,9 @@ There are two cheat sheets:
 The cheat sheet is work-in-progress and the information given may or may not
 be correct. Always double check all information given. I am not responsible
 for any data lass due to false information given in the cheat sheet.
-=======
-The cheat sheet is work-in-progress and the information given may or
-may not be correct. Always double check all information given. I am
-not responsible for any data lass due to false information given in
-the cheat sheet.
->>>>>>> 5c9de26f4cdbdf31ac6a2dfa800f626caa7a8382
 
-Create PDF
-==========
+Create a PDF file
+=================
 
 reStructuredText can be converted to PDF in many ways. I use
 ``rst2pdf``::

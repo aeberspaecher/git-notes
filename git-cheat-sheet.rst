@@ -52,10 +52,13 @@ Basic Git
   If the files have been added before, they will be included in the
   'staging area' and thus committed withe the next ``git commit``.
 
-- Status and log::
+- Status, log and information::
 
     git status
     git log
+    git show [object]
+
+  ``[object]`` may be a commit or branch.
 
 - Commit changes::
 

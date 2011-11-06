@@ -121,7 +121,7 @@ Remotes
 Graphische Tools
 ================
 
-- GUI für Älltägliches/GUI für Geschichte/Branches::
+- GUI für Alltägliches bzw. GUI für Geschichte/Branches::
 
     git gui
     gitk

@@ -337,6 +337,13 @@ Checkout: Forget about changes
 resets ``fileName`` to the last checked in version - changes in the
 working directory are lost!
 
+::
+
+  git checkout name
+
+gets back to commit ``commitName``. Note that information on ``HEAD`` is lost
+in this case. However, ``git reflog`` still remembers where ``HEAD`` was.
+
 Stashes: keep changes
 ---------------------
 

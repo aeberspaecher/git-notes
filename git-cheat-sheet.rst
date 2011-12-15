@@ -120,6 +120,10 @@ Basic Git
 
     git diff fileName
 
+  ``diff`` for changes that are already staged::
+
+    git diff --cached
+
 - let git ignore certain files: create a file ``.gitignore`` and add it to the
   repo::
 

@@ -58,7 +58,7 @@ Basic Git
     git log
     git show [object]
 
-  ``[object]`` may be a commit or branch.
+  ``[object]`` may be a commit, branch or something like ``stash@{0}``.
 
 - Commit changes::
 

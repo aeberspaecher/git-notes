@@ -202,12 +202,12 @@ Using ``git`` with remote repositories
 
 - add alias ``myRepo`` for remote repository::
 
-    git remote add myRepo ssh://user@host.domain.tld/directory/myRepo
+    git remote add remoteAlias ssh://user@host.domain.tld/directory/myRepo
 
 - show aliases for remote repositories::
 
     git remote
-    git remote show aliasName
+    git remote show remoteAlias
 
   The second line gives details (also on branches).
 
@@ -217,7 +217,7 @@ Using ``git`` with remote repositories
 
 - remove a remote (and all tracking branches already fetched)::
 
-    git remote rm alias
+    git remote rm remoteAlias
 
 - clone a copy of a remote repository and create a local repository with
   a suitable remote ``origin`` set::
@@ -227,11 +227,7 @@ Using ``git`` with remote repositories
   ``clone`` will get create a subfolder, fill (fetch) the subfolder with
   the contents of the repo and then create and checkout the default
   branch.
-
-- get a specific branch from the remote and start working in it::
-
-    git checkout -b branchName origin/branchName
-
+  
 - retrieve all remote branches with
 
   ::
@@ -239,6 +235,10 @@ Using ``git`` with remote repositories
     git fetch remoteAlias
 
   No local branches will be altered (merging possibly needed).
+  
+- get a specific branch from the remote and start working in it::
+
+    git checkout -b branchName origin/branchName
 
 - fetch a remote branch and merge it with the current branch::
 
@@ -275,6 +275,8 @@ With central repository
 
 - Create a repository on central server::
 
+    mkdir foo
+    cd foo
     git init --bare --shared foo.git
     chgrp -R dev foo.git  (optional)
 

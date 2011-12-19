@@ -385,6 +385,13 @@ Stashes: keep changes
 
   deletes the stash ``stash@{0}``.
 
+Graphical tools
+===============
+
+- ``git gui``: Perform adding, commiting, branching etc. graphically.
+- ``gitk``: View commit history and branches.
+- ``git difftool``: View diffs graphically (needs setting ``diff.tool``).
+
 Links
 =====
 

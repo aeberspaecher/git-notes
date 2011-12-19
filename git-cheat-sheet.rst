@@ -197,6 +197,15 @@ Branches
   will fetch ``'origin/theirBranch`` and merge with the local ``theirBranch``
   branch.
 
+Git Notions
+===========
+
+- ``HEAD``: pointer the branch we are on.
+- ``branch``: pointer to a commit.
+- ``commit``: snapshot of the ``git`` 'filesystem' including information on parent commits/snapshots.
+- ``working directory``: copies of files under version control.
+- ``staging area``: copy of the ``git`` 'filesystem' to be included in the next ``commit``.
+
 Using ``git`` with remote repositories
 ======================================
 
@@ -403,7 +412,6 @@ Links
 TODO
 ====
 
-- notions (staging, head...)
 - info on merging
 - learn rebasing
 - fix bugs (that certainly do exist in here)

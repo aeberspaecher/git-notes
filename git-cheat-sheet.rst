@@ -184,9 +184,16 @@ Branches
 
     git checkout branchToUse fileName
 
-- create a tracking branch that follows remote changes::
+- create a tracking branch (automatically pull and push from/to the tracked
+  branch - used to follow remote changes) ``branchName``::
 
-    git branch --track myBranch remoteAlias/theirBranch
+    git checkout --track remoteAlias/branchName
+
+  A different local name ``localName`` can be used with
+
+  ::
+
+    git checkout -b localName remoteAlias/branchName
 
   Alternatively,
 
@@ -354,7 +361,7 @@ working directory are lost!
 
 ::
 
-  git checkout name
+  git checkout commitName
 
 gets back to commit ``commitName``. Note that information on ``HEAD`` is lost
 in this case. However, ``git reflog`` still remembers where ``HEAD`` was.

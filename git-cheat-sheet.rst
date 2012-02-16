@@ -84,7 +84,7 @@ Basic Git
 
     git commit --amend
 
-  Opens the text editor to change to commit message. Also notices
+  Opens the text editor to change the commit message. Also notices
   files that have been changed and staged (``git add file``) or
   removed.
 
@@ -375,6 +375,8 @@ working directory are lost!
 gets back to commit ``commitName``. Note that information on ``HEAD`` is lost
 in this case. However, ``git reflog`` still remembers where ``HEAD`` was.
 
+If the changes might be needed later, it is wise to stash them away.
+
 Stashes: keep changes
 ---------------------
 
@@ -406,9 +408,9 @@ Stashes: keep changes
 
   ::
 
-    git stash drop stash@{0}
+    git stash drop stash@{2}
 
-  deletes the stash ``stash@{0}``.
+  deletes the stash ``stash@{2}``.
 
 Graphical tools
 ===============

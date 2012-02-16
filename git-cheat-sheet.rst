@@ -204,6 +204,15 @@ Branches
   will fetch ``'origin/theirBranch`` and merge with the local ``theirBranch``
   branch.
 
+- make an existing branch track a remote branch::
+
+    git branch --set-upstream localBranch remoteAlias/remoteBranch
+
+- pick commits from a different branch::
+
+    git checkout branchToApplyCommitTo
+    git cherry-pick sha1HashOfCommit
+
 Git Notions
 ===========
 
@@ -405,7 +414,7 @@ Graphical tools
 ===============
 
 - ``git gui``: Perform adding, commiting, branching etc. graphically.
-- ``gitk``: View commit history and branches.
+- ``gitk``: View commit history and branches (also available as the GTK tool ``gitg``).
 - ``git difftool``: View diffs graphically (needs setting ``diff.tool``).
 
 Links

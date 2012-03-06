@@ -172,6 +172,19 @@ Branches
 
     git merge other
 
+- remove merge conflicts by replacing the code in *scissors*
+
+  ::
+
+    <<<<<<< HEAD:file
+    code from branch to merge into
+    =======
+    conflicting code from branch to merge in
+    >>>>>>> branchToMerge
+
+  by an appropriate resolution. Then, staging the fixed file tells git that
+  all conflicts have been removed.
+
 - push all branches to remote repository::
 
     git push --all
@@ -392,7 +405,7 @@ Stashes: keep changes
 
     git stash apply
 
-  keeps to stash saved, whereas
+  keeps the stash saved, whereas
 
   ::
 
@@ -430,6 +443,5 @@ Links
 TODO
 ====
 
-- info on merging
 - learn rebasing
 - fix bugs (that certainly do exist in here)

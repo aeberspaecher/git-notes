@@ -1,6 +1,6 @@
-=======================
-A (WIP) git cheat sheet
-=======================
+===========================
+A (WIP) set of notes on git
+===========================
 
 About
 =====
@@ -9,7 +9,7 @@ This is meant to be an attempt at a lengthy ``git`` 'cheat sheet'. I
 am am still very new to ``git`` and trying to take notes on my
 personal progress with ``git``.
 
-There are two cheat sheets:
+There are two set of notes:
 
 - ``git-cheat-sheet.*`` is a rather long cheat sheet in English
 - ``git-mini-cheat-sheet.*`` is a 2-page essence of the longer version
@@ -28,3 +28,12 @@ reStructuredText can be converted to PDF in many ways. I use
   rst2pdf -s twocolumn -s freetype-serif -s a4-landscape git-cheat-sheet.rst
 
 As an alternative, I use https://github.com/aeberspaecher/rstpdf.
+
+Download
+========
+
+For convenience, the binary PDF files are part of the repository, too. Download
+them directly using these links:
+
+- https://github.com/aeberspaecher/git-notes/raw/master/git-cheat-sheet.pdf
+- https://github.com/aeberspaecher/git-notes/raw/master/git-mini-cheat-sheet.pdf 

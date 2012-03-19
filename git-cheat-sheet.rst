@@ -50,7 +50,7 @@ Basic Git
     git add *
 
   If the files have been added before, they will be included in the
-  'staging area' and thus committed withe the next ``git commit``.
+  'staging_ area' and thus committed withe the next ``git`` commit_.
 
 - Status, log and information::
 
@@ -124,6 +124,9 @@ Basic Git
 
     git diff --cached
 
+  There is also ``git difftool``, which opens a tool with a UI, see
+  `Graphical Tools`_.
+
 - let git ignore certain files: create a file ``.gitignore`` and add it to the
   repo::
 
@@ -134,6 +137,66 @@ Basic Git
 
   This makes ``git`` ignore the file ``TODO`` and all ``.so`` files, except
   ``bla.so``.
+
+Undoing stuff
+=============
+
+There are at least two different ways to reset to working directory to the
+last versioned status:
+
+Checkout: Forget about changes
+------------------------------
+
+::
+
+  git checkout -- fileName
+
+resets ``fileName`` to the last checked in version - changes in the working
+directory are lost!
+
+::
+
+  git checkout commitName
+
+gets back to commit ``commitName``. Note that information on HEAD_ is
+lost in this case. However, ``git reflog`` still remembers where HEAD_ was.
+
+If the changes might be needed later, it is wise to stash them away.
+
+Stashes: keep changes
+---------------------
+
+- changes in a working dirctory may be 'stashed' away::
+
+    git stash save "Status before going back"
+
+- stashes are listed with::
+
+    git stash list
+
+- apply the stash on top of the stack again::
+
+    git stash apply
+
+  keeps the stash saved, whereas
+
+  ::
+
+    git stash pop
+
+  applies the stash and also removes the stash form the list.
+
+- delete a stash::
+
+    git stash drop
+
+  deletes the stash on top of the stack, whereas
+
+  ::
+
+    git stash drop stash@{2}
+
+  deletes the stash ``stash@{2}``.
 
 Branches
 ========
@@ -160,7 +223,7 @@ Branches
 
     git branch -d branchName
 
-  for branches that branch off ``HEAD``;
+  for branches that branch off HEAD_;
 
   ::
 
@@ -168,7 +231,9 @@ Branches
 
   for any branch.
 
-- merge ``other`` branch into current branch::
+- .. _merging:
+
+  merge ``other`` branch into current branch::
 
     git merge other
 
@@ -217,7 +282,11 @@ Branches
   will fetch ``'origin/theirBranch`` and merge with the local ``theirBranch``
   branch.
 
-- make an existing branch track a remote branch::
+- .. _tracking:
+
+  make an existing branch track a remote branch
+
+  ::
 
     git branch --set-upstream localBranch remoteAlias/remoteBranch
 
@@ -226,14 +295,22 @@ Branches
     git checkout branchToApplyCommitTo
     git cherry-pick sha1HashOfCommit
 
-Git Notions
-===========
+Some Git Notions
+================
 
-- ``HEAD``: pointer the branch we are on.
+- .. _HEAD:
+
+  ``HEAD``: pointer the branch we are on.
 - ``branch``: pointer to a commit.
-- ``commit``: snapshot of the ``git`` 'filesystem' including information on parent commits/snapshots.
+- .. _commit:
+
+  ``commit``: snapshot of the ``git`` 'filesystem' including information on
+  parent commits/snapshots.
 - ``working directory``: copies of files under version control.
-- ``staging area``: copy of the ``git`` 'filesystem' to be included in the next ``commit``.
+- .. _staging:
+
+  ``staging area``: copy of the ``git`` 'filesystem' to be included in the
+  next ``commit``.
 
 Using ``git`` with remote repositories
 ======================================
@@ -265,15 +342,15 @@ Using ``git`` with remote repositories
   ``clone`` will get create a subfolder, fill (fetch) the subfolder with
   the contents of the repo and then create and checkout the default
   branch.
-  
+
 - retrieve all remote branches with
 
   ::
 
     git fetch remoteAlias
 
-  No local branches will be altered (merging possibly needed).
-  
+  No local branches will be altered (merging_ possibly needed).
+
 - get a specific branch from the remote and start working in it::
 
     git checkout -b branchName origin/branchName
@@ -326,7 +403,14 @@ With central repository
     cd localRepo
     git push ssh://user@host.domain.tld/home/user/foo.git '*:*'
 
-  (this pushes the local repo with everything to the server)
+  This pushes the local repo [all branches!] to the server. Instead of '*:*',
+  individual branches can be pushed using
+
+  ::
+
+    git push ssh://user@host.domain.tld/home/user/foo.git myName:theirName
+
+  In any case, it may be wise to make the branches tracking_.
 
 - clone new working directory that tracks the one on the server::
 
@@ -365,71 +449,12 @@ With GitHub
 
   For more options, see above.
 
-Discarding changes in working copy
-==================================
-
-There are at least two different ways to reset to working directory to the last
-versioned status:
-
-Checkout: Forget about changes
-------------------------------
-
-::
-
-  git checkout -- fileName
-
-resets ``fileName`` to the last checked in version - changes in the
-working directory are lost!
-
-::
-
-  git checkout commitName
-
-gets back to commit ``commitName``. Note that information on ``HEAD`` is lost
-in this case. However, ``git reflog`` still remembers where ``HEAD`` was.
-
-If the changes might be needed later, it is wise to stash them away.
-
-Stashes: keep changes
----------------------
-
-- changes in a working dirctory may be 'stashed' away::
-
-    git stash save "Status before going back"
-
-- stashes are listed with::
-
-    git stash list
-
-- apply the stash on top of the stack again::
-
-    git stash apply
-
-  keeps the stash saved, whereas
-
-  ::
-
-    git stash pop
-
-  applies the stash and also removes the stash form the list.
-
-- delete a stash::
-
-    git stash drop
-
-  deletes the stash on top of the stack, whereas
-
-  ::
-
-    git stash drop stash@{2}
-
-  deletes the stash ``stash@{2}``.
-
 Graphical tools
 ===============
 
 - ``git gui``: Perform adding, commiting, branching etc. graphically.
-- ``gitk``: View commit history and branches (also available as the GTK tool ``gitg``).
+- ``gitk``: View commit history and branches (also available: the GTK tool
+  ``gitg``).
 - ``git difftool``: View diffs graphically (needs setting ``diff.tool``).
 
 Links

@@ -147,21 +147,41 @@ last versioned status:
 Checkout: Forget about changes
 ------------------------------
 
-::
+1. changes have not been committed yet
 
-  git checkout -- fileName
+  ::
 
-resets ``fileName`` to the last checked in version - changes in the working
-directory are lost!
+    git checkout -- fileName
 
-::
+  resets ``fileName`` to the last checked in version - the change in the working
+  directory is lost! If multiple files are to be reset,
 
-  git checkout commitName
+  ::
 
-gets back to commit ``commitName``. Note that information on HEAD_ is
-lost in this case. However, ``git reflog`` still remembers where HEAD_ was.
+    git reset --hard HEAD
 
-If the changes might be needed later, it is wise to stash them away.
+  sets the working tree back to the latest commit.
+
+  ::
+
+    git checkout commitName
+
+  gets back to commit ``commitName``. Note that information on HEAD_ is
+  lost in this case. However, ``git reflog`` still remembers where HEAD_ was.
+
+  If the changes might be needed later, it is wise to stash them away (see
+  `Stashes: keep changes`_).
+
+  __ Stashes:_
+
+2. changes have been already been committed
+
+  In this case, the commit can be reverted::
+
+    git revert HEAD
+
+  creates a new commit the reverts the last commit. Older commits may be
+  reverted by using e.g. ``git revert HEAD~3``. 
 
 Stashes: keep changes
 ---------------------

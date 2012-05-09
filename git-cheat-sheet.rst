@@ -172,8 +172,6 @@ Checkout: Forget about changes
   If the changes might be needed later, it is wise to stash them away (see
   `Stashes: keep changes`_).
 
-  __ Stashes:_
-
 2. changes have been already been committed
 
   In this case, the commit can be reverted::
@@ -186,7 +184,7 @@ Checkout: Forget about changes
 Stashes: keep changes
 ---------------------
 
-- changes in a working dirctory may be 'stashed' away::
+- changes in a working directory may be 'stashed' away::
 
     git stash save "Status before going back"
 
@@ -359,7 +357,7 @@ Using ``git`` with remote repositories
 
     git clone URL
 
-  ``clone`` will get create a subfolder, fill (fetch) the subfolder with
+  ``clone`` will get create a sub-folder, fill (fetch) the sub-folder with
   the contents of the repo and then create and checkout the default
   branch.
 
@@ -484,6 +482,7 @@ Links
 - "Pro Git" book: http://progit.org/
 - Git community book: http://book.git-scm.com/
 - Git with central sever: http://toroid.org/ams/git-central-repo-howto
+- specifying a commit etc.: http://book.git-scm.com/4_git_treeishes.html 
 
 TODO
 ====

@@ -308,6 +308,13 @@ Branches
 
     git branch --set-upstream localBranch remoteAlias/remoteBranch
 
+  This can be combined with push as follows::
+
+    git push -u remoteAlias remoteBranch
+
+  This pushes the branch you're on to ``remoteAlias/remoteBranch`` and makes
+  your brach tracking.
+
 - pick commits from a different branch::
 
     git checkout branchToApplyCommitTo

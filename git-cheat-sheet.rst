@@ -295,7 +295,7 @@ Branches
 
   ::
 
-     git pull theirBranach
+     git pull theirBranch
 
   will fetch ``'origin/theirBranch`` and merge with the local ``theirBranch``
   branch.
@@ -313,7 +313,7 @@ Branches
     git push -u remoteAlias remoteBranch
 
   This pushes the branch you're on to ``remoteAlias/remoteBranch`` and makes
-  your brach tracking.
+  your branch tracking.
 
 - pick commits from a different branch::
 
@@ -489,7 +489,7 @@ Links
 - "Pro Git" book: http://progit.org/
 - Git community book: http://book.git-scm.com/
 - Git with central sever: http://toroid.org/ams/git-central-repo-howto
-- specifying a commit etc.: http://book.git-scm.com/4_git_treeishes.html 
+- specifying a commit etc.: http://git-scm.com/book/en/Git-Tools-Revision-Selection
 
 TODO
 ====

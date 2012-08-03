@@ -27,7 +27,8 @@ reStructuredText can be converted to PDF in many ways. I use
 
   rst2pdf -s twocolumn -s freetype-serif -s a4-landscape git-cheat-sheet.rst
 
-As an alternative, I use https://github.com/aeberspaecher/rstpdf.
+As an alternative, I use a `small wrapper around rst2latex
+<https://github.com/aeberspaecher/rstpdf>`_.
 
 Download
 ========

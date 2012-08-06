@@ -109,7 +109,10 @@ Remotes
 - In einen remote 'pushen'::
 
     git push remoteName branchToPush
-    
+
+  Nach einem erfolgreichen ``git push -u origin master`` "folgt" der aktuelle
+  Branch autmatisch ``origin/master`` (``push`` und ``pull``!).
+
 - Aus einem remote 'pullen'::
 
     git pull remote
@@ -130,7 +133,5 @@ Graphische Tools
 
     git difftool [files]
     git mergetool [files]
-
-  ``files`` ist optional.
 
   Vorher die Einstellungen ``merge.tool`` und ``diff.tool`` setzen (``meld``!)

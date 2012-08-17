@@ -179,7 +179,7 @@ Checkout: Forget about changes
     git revert HEAD
 
   creates a new commit the reverts the last commit. Older commits may be
-  reverted by using e.g. ``git revert HEAD~3``. 
+  reverted by using e.g. ``git revert HEAD~3``.
 
 Stashes: keep changes
 ---------------------
@@ -233,7 +233,7 @@ Branches
 
     git checkout -b newBranch
 
-- change to a branch::
+- checkout a branch::
 
     git checkout branchName
 
@@ -271,6 +271,8 @@ Branches
 - push all branches to remote repository::
 
     git push --all
+
+  For more options with remotes, see `Using git with remote repositories`_.
 
 - rename a branch::
 

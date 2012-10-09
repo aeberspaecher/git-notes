@@ -423,7 +423,8 @@ With central repository
     chgrp -R dev foo.git  (optional)
 
   ``shared`` makes the repo group writable. ``bare`` means there is no
-  working copy.
+  working copy. On a server, bare repositories are preferred as one cannot push
+  to repositories with a working directory.
 
 - push local repo to server::
 
@@ -479,7 +480,7 @@ With GitHub
 Graphical tools
 ===============
 
-- ``git gui``: Perform adding, commiting, branching etc. graphically.
+- ``git gui``: Perform adding, committing, branching etc. graphically.
 - ``gitk``: View commit history and branches (also available: the GTK tool
   ``gitg``).
 - ``git difftool``: View diffs graphically (needs setting ``diff.tool``).

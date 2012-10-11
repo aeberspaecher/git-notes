@@ -17,19 +17,25 @@ Settings
 
   ``--global`` makes the setting global for all repos.
 
-- some common settings:
+- some common or useful settings:
 
-    +------------+----------------------+
-    |   Setting  |  Meaning             |
-    +============+======================+
-    | user.name  | User name.           |
-    +------------+----------------------+
-    | user.email | User email.          |
-    +------------+----------------------+
-    | color.ui   | Use colors ("auto"!)?|
-    +------------+----------------------+
-    |core.editor | Which editor to use? |
-    +------------+----------------------+
+    +------------------+----------------------+
+    |   Setting        |  Meaning             |
+    +==================+======================+
+    | user.name        | User name.           |
+    +------------------+----------------------+
+    | user.email       | User email.          |
+    +------------------+----------------------+
+    | color.ui         | Use colors ("auto"!)?|
+    +------------------+----------------------+
+    |core.editor       | Which editor to use? |
+    +------------------+----------------------+
+    | help.autocorrect | Time (in 100 ms).    |
+    +------------------+----------------------+
+
+The ``help.autocorrect`` setting makes ``git`` correct typos automatically
+after the given time has lapsed. E.g. ``git bull`` is corrected to ``git
+pull``.
 
 Basic Git
 =========

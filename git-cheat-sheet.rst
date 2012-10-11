@@ -1,6 +1,6 @@
-===============
-Git Cheat Sheet
-===============
+=============
+Git Reference
+=============
 
 Settings
 ========
@@ -33,7 +33,7 @@ Settings
     | help.autocorrect | Time (in 100 ms).    |
     +------------------+----------------------+
 
-The ``help.autocorrect`` setting makes ``git`` correct typos automatically
+The ``help.autocorrect`` setting makes git correct typos automatically
 after the given time has lapsed. E.g. ``git bull`` is corrected to ``git
 pull``.
 
@@ -56,7 +56,7 @@ Basic Git
     git add *
 
   If the files have been added before, they will be included in the
-  'staging_ area' and thus committed withe the next ``git`` commit_.
+  'staging_ area' and thus committed withe the next git commit_.
 
 - Status, log and information::
 
@@ -141,7 +141,7 @@ Basic Git
     !bla.so
     TODO
 
-  This makes ``git`` ignore the file ``TODO`` and all ``.so`` files, except
+  This makes git ignore the file ``TODO`` and all ``.so`` files, except
   ``bla.so``.
 
 Undoing stuff
@@ -499,6 +499,7 @@ Links
 - Git community book: http://book.git-scm.com/
 - Git with central sever: http://toroid.org/ams/git-central-repo-howto
 - specifying a commit etc.: http://git-scm.com/book/en/Git-Tools-Revision-Selection
+- "interactive" help on git: ``#git`` on Freenode
 
 TODO
 ====

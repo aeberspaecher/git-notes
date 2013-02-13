@@ -179,7 +179,7 @@ Checkout: Forget about changes
     git revert HEAD
 
   creates a new commit the reverts the last commit. Older commits may be
-  reverted by using e.g. ``git revert HEAD~3``. 
+  reverted by using e.g. ``git revert HEAD~3``.
 
 Stashes: keep changes
 ---------------------
@@ -297,7 +297,7 @@ Branches
 
      git pull theirBranch
 
-  will fetch ``'origin/theirBranch`` and merge with the local ``theirBranch``
+  will fetch ``origin/theirBranch`` and merge with the local ``theirBranch``
   branch.
 
 - .. _tracking:
@@ -477,10 +477,12 @@ With GitHub
 Graphical tools
 ===============
 
-- ``git gui``: Perform adding, commiting, branching etc. graphically.
+- ``git gui``: Perform adding, commiting, branching etc. graphically (also
+  worth a look: ``git cola``).
 - ``gitk``: View commit history and branches (also available: the GTK tool
   ``gitg``).
-- ``git difftool``: View diffs graphically (needs setting ``diff.tool``).
+- ``git difftool``: View diffs graphically (needs setting ``diff.tool`` in
+  ``.gitconfig``).
 
 Links
 =====
@@ -494,5 +496,6 @@ Links
 TODO
 ====
 
-- learn rebasing
+- add rebasing
+- add cherry-picking
 - fix bugs (that certainly do exist in here)

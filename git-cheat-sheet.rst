@@ -441,11 +441,7 @@ With central repository
 
     git clone ssh://user@host.domain.tld/home/user/foo.git newRepo
 
-- after hacking in ``newRepo``, update repo on server::
-
-    cd newRepo
-    git push
-
+- after hacking in ``newRepo``, update repo on server using ``git push``.
   For more options, see above.
 
 With GitHub

@@ -1,6 +1,6 @@
-===============
-Git Cheat Sheet
-===============
+=============
+Git Reference
+=============
 
 Settings
 ========
@@ -17,19 +17,25 @@ Settings
 
   ``--global`` makes the setting global for all repos.
 
-- some common settings:
+- some common or useful settings:
 
-    +------------+----------------------+
-    |   Setting  |  Meaning             |
-    +============+======================+
-    | user.name  | User name.           |
-    +------------+----------------------+
-    | user.email | User email.          |
-    +------------+----------------------+
-    | color.ui   | Use colors ("auto"!)?|
-    +------------+----------------------+
-    |core.editor | Which editor to use? |
-    +------------+----------------------+
+    +------------------+----------------------+
+    |   Setting        |  Meaning             |
+    +==================+======================+
+    | user.name        | User name.           |
+    +------------------+----------------------+
+    | user.email       | User email.          |
+    +------------------+----------------------+
+    | color.ui         | Use colors ("auto"!)?|
+    +------------------+----------------------+
+    |core.editor       | Which editor to use? |
+    +------------------+----------------------+
+    | help.autocorrect | Time (in 100 ms).    |
+    +------------------+----------------------+
+
+The ``help.autocorrect`` setting makes git correct typos automatically
+after the given time has lapsed. E.g. ``git bull`` is corrected to ``git
+pull``.
 
 Basic Git
 =========
@@ -50,7 +56,7 @@ Basic Git
     git add *
 
   If the files have been added before, they will be included in the
-  'staging_ area' and thus committed withe the next ``git`` commit_.
+  'staging_ area' and thus committed withe the next git commit_.
 
 - Status, log and information::
 
@@ -135,7 +141,7 @@ Basic Git
     !bla.so
     TODO
 
-  This makes ``git`` ignore the file ``TODO`` and all ``.so`` files, except
+  This makes git ignore the file ``TODO`` and all ``.so`` files, except
   ``bla.so``.
 
 Undoing stuff
@@ -233,7 +239,7 @@ Branches
 
     git checkout -b newBranch
 
-- change to a branch::
+- checkout a branch::
 
     git checkout branchName
 
@@ -271,6 +277,8 @@ Branches
 - push all branches to remote repository::
 
     git push --all
+
+  For more options with remotes, see `Using git with remote repositories`_.
 
 - rename a branch::
 
@@ -421,7 +429,8 @@ With central repository
     chgrp -R dev foo.git  (optional)
 
   ``shared`` makes the repo group writable. ``bare`` means there is no
-  working copy.
+  working copy. On a server, bare repositories are preferred as one cannot push
+  to repositories with a working directory.
 
 - push local repo to server::
 
@@ -473,7 +482,7 @@ With GitHub
 Graphical tools
 ===============
 
-- ``git gui``: Perform adding, commiting, branching etc. graphically (also
+- ``git gui``: Perform adding, committing, branching etc. graphically (also
   worth a look: ``git cola``).
 - ``gitk``: View commit history and branches (also available: the GTK tool
   ``gitg``).
@@ -488,6 +497,7 @@ Links
 - Git community book: http://book.git-scm.com/
 - Git with central sever: http://toroid.org/ams/git-central-repo-howto
 - specifying a commit etc.: http://git-scm.com/book/en/Git-Tools-Revision-Selection
+- "interactive" help on git: ``#git`` on Freenode
 
 TODO
 ====

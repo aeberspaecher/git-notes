@@ -60,9 +60,10 @@ Basic Git
 
 - Status, log and information::
 
-    git status
-    git log
+    git status  # current status
+    git log  # log of changes
     git show [object]
+    git whatchanged -p  # log along with the diff for each commit
 
   ``[object]`` may be a commit, branch or something like ``stash@{0}``.
 

@@ -480,6 +480,22 @@ With GitHub
 
   For more options, see above.
 
+Useful stuff
+============
+
+- tags are alternative names for entries in the history::
+
+    git tag tagname commit_id  # create a tag
+    git tag -d tagname  # delete a tag
+    git tag tagname commit_id -a "My tag 'tagname'"  # annotate a tag
+    git push origin tagname
+
+- archives of files under version::
+
+    git archive --output master.tar.gz master
+
+  ``master`` can also be a tag/commmit-id/...
+
 Graphical tools
 ===============
 

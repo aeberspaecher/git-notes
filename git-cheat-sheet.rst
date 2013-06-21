@@ -496,6 +496,13 @@ Useful stuff
 
   ``master`` can also be a tag/commmit-id/...
 
+- cleaning all files not tracked by ``git``::
+
+    git clean -f
+
+  Files that match any ``.gitignore`` are not deleted (add ``-x`` to delete
+  those, too). Add ``-d`` to remove untracked directories as well.
+
 Graphical tools
 ===============
 

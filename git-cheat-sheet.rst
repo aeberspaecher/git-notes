@@ -496,6 +496,13 @@ Useful stuff
 
   ``master`` can also be a tag/commmit-id/...
 
+- hacking on uncommitted changes on different machines::
+
+    git diff stash@{0}^ stash@{0} > changes.patch  # create patch
+    git apply changes.patch  # on other machine
+
+  A throw-away branch might be more suitable though.
+
 Graphical tools
 ===============
 

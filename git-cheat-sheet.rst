@@ -503,6 +503,13 @@ Useful stuff
 
   A throw-away branch might be more suitable though.
 
+- cleaning all files not tracked by ``git``::
+
+    git clean -f
+
+  Files that match any ``.gitignore`` are not deleted (add ``-x`` to delete
+  those, too). Add ``-d`` to remove untracked directories as well.
+
 Graphical tools
 ===============
 

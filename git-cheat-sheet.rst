@@ -311,11 +311,11 @@ Branches
 
 - .. _tracking:
 
-  make an existing branch track a remote branch
+  make the current branch track a remote branch
 
   ::
 
-    git branch --set-upstream localBranch remoteAlias/remoteBranch
+    git branch --set-upstream-to=remoteAlias/remoteBranch
 
   This can be combined with push as follows::
 

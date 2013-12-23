@@ -327,7 +327,7 @@ Branches
 - pick commits from a different branch::
 
     git checkout branchToApplyCommitTo
-    git cherry-pick sha1HashOfCommit
+    git cherry-pick SHA1HashOfCommit
 
 Some Git Notions
 ================

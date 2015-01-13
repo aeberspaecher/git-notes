@@ -188,6 +188,10 @@ Checkout: Forget about changes
   creates a new commit the reverts the last commit. Older commits may be
   reverted by using e.g. ``git revert HEAD~3``.
 
+3. changes are staged, but not committed yet::
+
+     git reset HEAD fileName
+
 Stashes: keep changes
 ---------------------
 

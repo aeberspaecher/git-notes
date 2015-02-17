@@ -389,7 +389,8 @@ Using ``git`` with remote repositories
 
   No local branches will be altered (merging_ possibly needed).
 
-- get a specific branch from the remote and start working in it::
+- get a specific branch from the remote and start working in it (``fetch``
+  first)::
 
     git checkout -b branchName origin/branchName
 
@@ -540,3 +541,4 @@ TODO
 - add rebasing
 - add cherry-picking
 - fix bugs (that certainly do exist in here)
+- list common ways of specifying commits (everything is a pointer...)
